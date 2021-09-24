@@ -9,7 +9,7 @@ defmodule Telemetry do
   @impl true
   def init(_arg) do
     children = [
-      {TelemetryMetricsLogger, metrics: metrics(), reporter_options: [interval: 10]}
+      {TelemetryMetricsLogger, metrics: metrics(), reporter_options: [interval: 60]}
     ]
 
     Supervisor.init(children, strategy: :one_for_one)

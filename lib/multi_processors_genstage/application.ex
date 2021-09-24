@@ -10,7 +10,7 @@ defmodule MultiProcessorsGenstage.Application do
     children =
       [
         Telemetry,
-        {Producer, 1000}
+        {Producer, 1_000_000}
       ] ++
         for(
           i <- 1..24,
