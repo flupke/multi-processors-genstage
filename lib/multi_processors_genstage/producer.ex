@@ -9,6 +9,7 @@ defmodule Producer do
 
   @impl true
   def init(state) do
+    Logger.info("Producer started")
     {:producer, state}
   end
 
